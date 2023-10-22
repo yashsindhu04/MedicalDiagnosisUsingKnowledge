@@ -26,11 +26,10 @@ def create_knowledgebase():
     
     return knowledge_bases
 
-def diagnose(your_symptoms):
+def diagnose(knowledge_bases, your_symptoms):
     '''
     Model checking logic: Check if the symptoms i have imply that i have the disease
     '''
-    knowledge_bases = create_knowledgebase()
     possible_diseases = []
     for disease in knowledge_bases:
         if model_check(knowledge_bases[disease], Implication(your_symptoms, Symbol(f'{disease}'))):
