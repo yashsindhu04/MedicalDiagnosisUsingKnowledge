@@ -12,7 +12,7 @@ st.write("Developed as a college project, reach out for any questions or feedbac
 
 symptom_list = pd.read_csv('Symptom-severity.csv').iloc[:,0].tolist()
 st.subheader("Enter Symptoms")
-selected_symptoms = st.multiselect("", symptom_list)
+selected_symptoms = st.multiselect(" ", symptom_list)
 
 if st.button("Diagnose"):
     symptoms = And(*[Symbol(f"{s}") for s in selected_symptoms])
