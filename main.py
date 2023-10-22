@@ -65,16 +65,10 @@ symptom_categories = {
     ]
 }
 
-# Create a multiselect dropdown with checkboxes for symptom categories
-selected_categories = st.multiselect("Select Symptom Categories", list(symptom_categories.keys()), key="categories")
-
-# Collect the selected symptoms
-selected_symptoms = []
-for category in selected_categories:
-    selected_symptoms.extend(st.checkbox(f"{category} Symptoms", symptom_categories[category], key=category))
-
-# Filter out the unchecked symptoms (if any)
-selected_symptoms = [symptom for symptom in selected_symptoms if symptom]
+symptom_list = pd.read_csv('Symptom-severity.csv').iloc[:,0].tolist()
+selected_symptoms = st.multiselect("Select Symptoms",symptom_list)
+# # Create a multiselect dropdown with checkboxes for symptom categories
+# selected_symptoms = st.multiselect("Select Symptoms ", list(symptom_categories.keys()), key="categories")
 
 # Display the selected symptoms
 st.write("Selected Symptoms:", selected_symptoms)
