@@ -3,8 +3,7 @@ from medical_diagnosis import *
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Medical Diagnosis Using Knowledge")
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide")
 st.title("Medical Diagnosis Using Knowledge")
 st.write("A diagnosis is made using knowledge base and the use of logical operators")
 st.write("Created by Yash Sindhu")
