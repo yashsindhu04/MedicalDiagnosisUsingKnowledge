@@ -11,8 +11,9 @@ st.write("Developed as a college project, reach out for any questions or feedbac
 symptom_list = pd.read_csv('Symptom-severity.csv').iloc[:,0].tolist()
 selected_symptoms = st.multiselect("Enter symptoms", symptom_list)
 
-symptoms = [Symbol(f"{s}") for s in selected_symptoms]
+if st.button("Diagnose"):
+    symptoms = [Symbol(f"{s}") for s in selected_symptoms]
 
-diagnosis = diagnose(symptoms)
-# Display the selected symptoms
-st.write("Diagnosis:", diagnosis)
+    diagnosis = diagnose(symptoms)
+    # Display the diagnosis
+    st.write("Diagnosis:", diagnosis)
