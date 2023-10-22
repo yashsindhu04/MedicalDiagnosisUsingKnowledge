@@ -19,5 +19,8 @@ if st.button("Diagnose"):
     diagnosis = diagnose(symptoms)
     # Display the diagnosis
     st.subheader("Diagnosis:")
-    for disease in diagnosis:
-        st.write(disease)
+    if len(diagnosis) == 0:
+        st.write("No disease found")
+    else:
+        for disease in diagnosis:
+            st.write(disease)
