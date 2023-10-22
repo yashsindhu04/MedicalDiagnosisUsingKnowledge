@@ -4,10 +4,6 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide")
-# base="light"
-# primaryColor="#9639d0"
-# backgroundColor="#e6e3e3"
-# secondaryBackgroundColor="#ffffff"
 
 st.title("Medical Diagnosis Using Knowledge")
 st.write("A diagnosis is made using knowledge base and the use of logical operators")
