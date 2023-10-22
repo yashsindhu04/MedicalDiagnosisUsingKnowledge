@@ -12,7 +12,7 @@ symptom_list = pd.read_csv('Symptom-severity.csv').iloc[:,0].tolist()
 selected_symptoms = st.multiselect("Enter symptoms", symptom_list)
 
 if st.button("Diagnose"):
-    symptoms = [Symbol(f"{s}") for s in selected_symptoms]
+    symptoms = And(*[Symbol(f"{s}") for s in selected_symptoms])
 
     diagnosis = diagnose(symptoms)
     # Display the diagnosis

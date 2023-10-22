@@ -39,7 +39,7 @@ def diagnose(your_symptoms):
     
     return possible_diseases
             
-# diagnose(And(Symbol('itching'),  Symbol('skin_rash'),  Symbol('dischromic_patches')))
+# print(diagnose(And(Symbol('itching'),  Symbol('skin_rash'),  Symbol('dischromic_patches'))))
             
 # print(knowledge_bases['Fungal infection'])
 # your_symptoms = And(Symbol('itching'),  Symbol('skin_rash'),  Symbol('dischromic_patches'))
