@@ -4,23 +4,6 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide")
-# Define the custom theme colors
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-color: #e6e3e3;
-    }}
-    .st-eb {{
-        background-color: #ffffff;
-    }}
-    .st-ej {{
-        background-color: #9639d0;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 # base="light"
 # primaryColor="#9639d0"
 # backgroundColor="#e6e3e3"
