@@ -131,18 +131,26 @@ class Biconditional():
         return set.union(self.left.symbols(), self.right.symbols())
 
 
+# def create_table(symbols):
+#     values = [True, False]
+#     num_columns = len(symbols)
+#     all_combinations = list(itertools.product(values, repeat=num_columns))
+#     table = []
+#     for model in all_combinations:
+#         temp = dict()
+#         for symbol, value in zip(symbols, model):
+#             temp[symbol] = value
+#         table.append(temp)
+#         del (temp)
+#     return table
+
 def create_table(symbols):
     values = [True, False]
     num_columns = len(symbols)
-    all_combinations = list(itertools.product(values, repeat=num_columns))
-    table = []
-    for model in all_combinations:
-        temp = dict()
-        for symbol, value in zip(symbols, model):
-            temp[symbol] = value
-        table.append(temp)
-        del (temp)
-    return table
+    for model in itertools.product(values, repeat=num_columns):
+        model_dict = {symbol: value for symbol, value in zip(symbols, model)}
+        yield model_dict
+
 
 def model_check(knowledge, query):
     symbols = set.union(knowledge.symbols(), query.symbols())

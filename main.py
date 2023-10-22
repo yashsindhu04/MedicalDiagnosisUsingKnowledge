@@ -1,4 +1,4 @@
-from logic import *
+from logic import *  # modified the creat_table function to better optimize memory
 from medical_diagnosis import *
 import streamlit as st
 import pandas as pd
