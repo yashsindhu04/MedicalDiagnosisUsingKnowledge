@@ -3,17 +3,28 @@ from medical_diagnosis import *
 import streamlit as st
 import pandas as pd
 
-# st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide")
-st.set_page_config(
-    page_title="Medical Diagnosis Using Knowledge",
-    page_icon=":microscope:",
-    layout="wide",
-    initial_sidebar_state="auto",
-    base="light",                  
-    primaryColor="#9639d0",        
-    backgroundColor="#e6e3e3",     
-    secondaryBackgroundColor="#ffffff"
+st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide")
+# Define the custom theme colors
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-color: #e6e3e3;
+    }}
+    .st-eb {{
+        background-color: #ffffff;
+    }}
+    .st-ej {{
+        background-color: #9639d0;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
+# base="light"
+# primaryColor="#9639d0"
+# backgroundColor="#e6e3e3"
+# secondaryBackgroundColor="#ffffff"
 
 st.title("Medical Diagnosis Using Knowledge")
 st.write("A diagnosis is made using knowledge base and the use of logical operators")
