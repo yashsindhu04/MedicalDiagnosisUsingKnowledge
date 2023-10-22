@@ -31,9 +31,13 @@ def diagnose(your_symptoms):
     Model checking logic: Check if the symptoms i have imply that i have the disease
     '''
     knowledge_bases = create_knowledgebase()
+    possible_diseases = []
     for disease in knowledge_bases:
         if model_check(knowledge_bases[disease], Implication(your_symptoms, Symbol(f'{disease}'))):
-            print(f'{disease}: Yes')
+            # print(f'{disease}: Yes')
+            possible_diseases.append(disease)
+    
+    return possible_diseases
             
 # diagnose(And(Symbol('itching'),  Symbol('skin_rash'),  Symbol('dischromic_patches')))
             

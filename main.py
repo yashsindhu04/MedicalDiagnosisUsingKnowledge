@@ -12,5 +12,7 @@ symptom_list = pd.read_csv('Symptom-severity.csv').iloc[:,0].tolist()
 selected_symptoms = st.multiselect("Enter symptoms", symptom_list)
 
 symptoms = [Symbol(f"{s}") for s in selected_symptoms]
+
+diagnosis = diagnose(symptoms)
 # Display the selected symptoms
-st.write("Selected Symptoms:", symptoms)
+st.write("Diagnosis:", diagnosis)
