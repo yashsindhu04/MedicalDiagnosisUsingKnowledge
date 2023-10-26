@@ -1,6 +1,15 @@
-## Medical Diagnosis Using Knowledge
+# Medical Diagnosis Using Knowledge
 
 This repository contains Python code for a medical diagnosis system that utilizes a knowledge base and logical operators to diagnose diseases based on a set of symptoms. The system consists of two main files: `medical_diagnosis.py` and `main.py`. Below is an overview of each file and its functionality.
+
+### The Logic of the Knowledge base
+
+`medical_diagnosis.py` contains all the main logic behind the creating of the knowledge base and model checking. Each disease has its own knowledge base defined by:
+```python
+Implication(Or(And(all symptoms in set1), And(all symptoms in set2))), disease)
+```
+ which means *for a person to have that disease, they must have atleast one set of symptoms of the disease to ensure that they do have the disease*.
+
 
 ### `medical_diagnosis.py`
 
@@ -30,7 +39,7 @@ To use this medical diagnosis system, follow these steps:
 
 1. Ensure you have the required libraries installed, from `requirements.txt`.
 
-4. Run `streamlit run main.py` using a Python interpreter.
+4. Run `streamlit run main.py` using a Python interpreter locally or follow the link: *https://medicaldiagnosisusingknowledge.streamlit.app/*.
 
 5. Use the web interface to select symptoms and click the "Diagnose" button to receive a list of possible diseases.
 
