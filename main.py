@@ -7,6 +7,7 @@ st.set_page_config(page_title="Medical Diagnosis Using Knowledge", layout="wide"
 
 st.title("Medical Diagnosis Using Knowledge")
 st.write("A diagnosis is made using knowledge base and the use of logical operators")
+st.write("The logical statement for the knowledge base is: Implication(Or(And(all symptoms in set1), And(all symptoms in set2))), disease)")
 st.write("Created by Yash Sindhu")
 st.write("Developed as a college project, reach out for any questions or feedback at yashsindhu4903@gmail.com")
 
